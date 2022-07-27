@@ -1,0 +1,11 @@
+<h1>Укорачиватель ссылок</h1>
+<h3>Разработчик: <a href="https://github.com/albrant" target="_blank">Альбрант Евгений</a></h3>
+<hr>
+{% if url %}
+    Короткая ссылка: <a href="{{url}}" target="_blank">{{ url }}</a>
+{% endif %}    
+    <form action="." method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="submit" value="Получить короткую ссылку"/>
+    </form>
